@@ -8,6 +8,7 @@
 export_credentials.cfg
 
 *.tmp
+*.apk
 
 # OS
 .DS_Store
