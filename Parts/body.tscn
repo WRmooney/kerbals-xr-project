@@ -1,10 +1,13 @@
-[gd_scene format=3 uid="uid://pad7m4w0d4mc"]
+[gd_scene format=3 uid="uid://l5537bipubs6"]
+
+[ext_resource type="Script" uid="uid://dk8ewceshmncc" path="res://Parts/body.gd" id="1_uxgo8"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xyp5m"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_56ogl"]
 
 [node name="Body 1" type="RigidBody3D" unique_id=818916739]
+script = ExtResource("1_uxgo8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=812582809]
 mesh = SubResource("CylinderMesh_xyp5m")

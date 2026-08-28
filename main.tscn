@@ -8,10 +8,12 @@
 [ext_resource type="Script" uid="uid://bkeashwobe3gi" path="res://xr_passthrough.gd" id="6_pass"]
 [ext_resource type="Shader" uid="uid://bdncegx70k5ge" path="res://floor_grid.gdshader" id="7_grid"]
 [ext_resource type="PackedScene" uid="uid://bmajj8peuvkj" path="res://table.tscn" id="8_4c57u"]
-[ext_resource type="PackedScene" uid="uid://cjkee07gd5ge1" path="res://thruster_1.tscn" id="9_efxa6"]
-[ext_resource type="PackedScene" uid="uid://b6x4mr1vog4rm" path="res://tip.tscn" id="10_dg77c"]
-[ext_resource type="PackedScene" path="res://Parts/body.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" path="res://thruster_1.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" path="res://tip.tscn" id="10_dg77c"]
+[ext_resource type="PackedScene" uid="uid://l5537bipubs6" path="res://Parts/body.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://cc7g1xe1upaxl" path="res://build_snap_grid.tscn" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://beh8gtpji1m2t" path="res://Parts/LaunchPad.gltf" id="13_w48qg"]
+[ext_resource type="PackedScene" uid="uid://bopg0pwmk1dq7" path="res://Parts/Fins.gltf" id="14_vivmo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cjouy"]
 
@@ -69,16 +71,16 @@ world_environment = NodePath("../WorldEnvironment")
 hide_in_passthrough = Array[NodePath]([NodePath("../Floor")])
 
 [node name="table" parent="." unique_id=1296891049 instance=ExtResource("8_4c57u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.069633245, 0, -1.673191)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0666579, 1.1920929e-07, -1.6914593)
 
 [node name="thruster 1" parent="." unique_id=1956531475 instance=ExtResource("9_efxa6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7748513, 0.96277595, -1.1512413)
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -0.6262634, 0.95959324, -1.6258105)
 
 [node name="tip" parent="." unique_id=1328606701 instance=ExtResource("10_dg77c")]
-transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0.5403127, 0.96277606, -1.0641183)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.53345466, 0.96277606, -1.2862445)
 
 [node name="Body 1" parent="." unique_id=818916739 instance=ExtResource("11_efxa6")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.7506294, 1.007626, -1.7373545)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.68537354, 1.463961, -2.0708046)
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1033207768]
 
@@ -106,4 +108,10 @@ right_model = ExtResource("5_mdlr")
 script = ExtResource("3_hnd0v")
 
 [node name="build-snap-grid" parent="." unique_id=1349116569 instance=ExtResource("12_dg77c")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.052965164, -2.3841858e-07, 1.4826955)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0.052965164, 0.244937, 1.5854591)
+
+[node name="Root" parent="." unique_id=650079292 instance=ExtResource("13_w48qg")]
+transform = Transform3D(0.018272636, 0, 19.999992, 0, 20, 0, -19.999992, 0, 0.018272636, 0.057053924, 1.1920929e-07, 1.7988292)
+
+[node name="Root2" parent="." unique_id=1385099598 instance=ExtResource("14_vivmo")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.3783521, 0.9627761, -1.9978237)
