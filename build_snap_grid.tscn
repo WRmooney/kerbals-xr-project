@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dh1epr8i2rtwj"]
 
+[ext_resource type="Script" uid="uid://da83un24s2gmi" path="res://build_snap_grid.gd" id="1_l3yew"]
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_aihiy"]
 height = 1.6665039
 
@@ -14,6 +16,7 @@ radius = 0.6230469
 size = Vector3(0.29016113, 0.65911865, 0.14941406)
 
 [node name="build-snap-grid" type="Node3D" unique_id=1349116569]
+script = ExtResource("1_l3yew")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1649311926]
 
@@ -21,14 +24,28 @@ size = Vector3(0.29016113, 0.65911865, 0.14941406)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3689427, 0)
 shape = SubResource("CylinderShape3D_aihiy")
 
-[node name="tiparea" type="CollisionShape3D" parent="Area3D" unique_id=1369389109]
+[node name="Area3D2" type="Area3D" parent="." unique_id=665495327]
+
+[node name="tiparea" type="CollisionShape3D" parent="Area3D2" unique_id=982010961]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 2.7017598, 0.0019683838)
 shape = SubResource("BoxShape3D_c3ytn")
 
-[node name="thrusterarea" type="CollisionShape3D" parent="Area3D" unique_id=2004343919]
+[node name="Area3D3" type="Area3D" parent="." unique_id=267392752]
+
+[node name="thrusterarea" type="CollisionShape3D" parent="Area3D3" unique_id=2109839954]
 transform = Transform3D(0.9999979, -0.0020407648, 0, 0.0020407648, 0.9999979, 0, 0, 0, 1, -0.022344045, 0.37602496, 0)
 shape = SubResource("CylinderShape3D_c3ytn")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1662374097]
+[node name="Area3D4" type="Area3D" parent="." unique_id=2001581625]
+
+[node name="finarea" type="CollisionShape3D" parent="Area3D4" unique_id=1215121744]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6402203, 1.3598735, 0.0011439323)
 shape = SubResource("BoxShape3D_aihiy")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]
+[connection signal="body_entered" from="Area3D4" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D4" to="." method="_on_area_3d_4_body_entered"]
