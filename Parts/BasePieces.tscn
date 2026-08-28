@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
+[gd_scene format=3 uid="uid://4a1yrd38w8rj"]
+
+[ext_resource type="PackedScene" uid="uid://ckdgv43myl2wx" path="res://Parts/Part Studio 1.gltf" id="1_6svi4"]
+[ext_resource type="PackedScene" path="res://Parts/body.tscn" id="1_xm6pe"]
+=======
 [gd_scene format=3 uid="uid://ckvsbpucwh6mb"]
 
 [ext_resource type="PackedScene" uid="uid://ckdgv43myl2wx" path="res://Parts/Part Studio 1.gltf" id="1_6svi4"]
 [ext_resource type="PackedScene" uid="uid://bodfcsep55kxb" path="res://Parts/body.tscn" id="1_xm6pe"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://bw61pj7jwjs0x" path="res://Parts/Thruster.gltf" id="2_uct1n"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_13v44"]
