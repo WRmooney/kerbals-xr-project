@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dwcnx5p8k06uy"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xyp5m"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_56ogl"]
+
+[node name="Node3D" type="Node3D" unique_id=284915954]
+
+[node name="Props" type="Node3D" parent="." unique_id=29481995]
+
+[node name="Body" type="RigidBody3D" parent="Props" unique_id=256278164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8134613, 1.6137463, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Body" unique_id=779309015]
+mesh = SubResource("CylinderMesh_xyp5m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Body" unique_id=1895643189]
+shape = SubResource("CylinderShape3D_56ogl")
