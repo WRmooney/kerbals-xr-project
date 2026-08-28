@@ -7,11 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://cn5kxyuuli1wv" path="res://models/quest_touch_plus_right.glb" id="5_mdlr"]
 [ext_resource type="Script" uid="uid://bkeashwobe3gi" path="res://xr_passthrough.gd" id="6_pass"]
 [ext_resource type="Shader" uid="uid://bdncegx70k5ge" path="res://floor_grid.gdshader" id="7_grid"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bmajj8peuvkj" path="res://table.tscn" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cjkee07gd5ge1" path="res://thruster_1.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://b6x4mr1vog4rm" path="res://tip.tscn" id="10_dg77c"]
 [ext_resource type="PackedScene" path="res://Parts/body.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://cc7g1xe1upaxl" path="res://build_snap_grid.tscn" id="12_dg77c"]
+=======
+[ext_resource type="PackedScene" uid="uid://lpksmtnbf8ab" path="res://table.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cjgukrislxqb4" path="res://thruster_1.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://c6noy04eo85kt" path="res://tip.tscn" id="10_dg77c"]
+[ext_resource type="PackedScene" uid="uid://bodfcsep55kxb" path="res://Parts/body.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://dh1epr8i2rtwj" path="res://build_snap_grid.tscn" id="12_dg77c"]
+>>>>>>> Stashed changes
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cjouy"]
 
@@ -55,7 +63,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 shape = SubResource("BoxShape3D_floor")
 
 [node name="SunLight" type="DirectionalLight3D" parent="." unique_id=1844096403]
+<<<<<<< Updated upstream
 transform = Transform3D(0.86601907, -0.3535631, 0.35355926, 0, 0.70710295, 0.70711064, -0.500011, -0.61237127, 0.6123646, 0.0060486794, 3.0108788, 0.004557848)
+=======
+transform = Transform3D(0.86601907, -0.3535631, 0.35355926, 0, 0.70710295, 0.70711064, -0.500011, -0.61237127, 0.6123646, 0, 2.9986405, 0)
+>>>>>>> Stashed changes
 light_energy = 1.1
 shadow_enabled = true
 shadow_bias = 0.03

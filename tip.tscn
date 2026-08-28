@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://b6x4mr1vog4rm"]
+=======
+[gd_scene format=3 uid="uid://c6noy04eo85kt"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://ckdgv43myl2wx" path="res://Parts/Part Studio 1.gltf" id="1_vk2th"]
 
