@@ -16,5 +16,6 @@ Thumbs.db
 desktop.ini
 
 # OpenXR Vendors plugin
+/addons/
 /addons/godotopenxrvendors/
 /asset/
