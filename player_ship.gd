@@ -18,11 +18,9 @@ func _process(delta: float) -> void:
 	if cam_resets < 30:
 		XRServer.center_on_hmd(XRServer.DONT_RESET_ROTATION, false)
 		cam_resets += 1
-	print(joystick)
 	if joystick:
 		var joystick_val = joystick.get_input()
-		position.y += joystick_val.y * 0.1
-		position.z += joystick_val.x * -0.1
-		xr_origin.position.y += joystick_val.y * 0.1
-		xr_origin.position.z += joystick_val.x * -0.1
-		print(position)
+		position.y += joystick_val.y * 0.05
+		position.z += joystick_val.x * -0.05
+		xr_origin.position.y += joystick_val.y * 0.05
+		xr_origin.position.z += joystick_val.x * -0.05

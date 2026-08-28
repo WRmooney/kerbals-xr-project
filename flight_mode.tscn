@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://blcpm0y6roxuv" path="res://panorama_image (1).png" id="2_58roa"]
 [ext_resource type="PackedScene" uid="uid://bowu3np7y30um" path="res://player_ship.tscn" id="3_58roa"]
 [ext_resource type="Texture2D" uid="uid://l0qspk6u3dum" path="res://icon.svg" id="4_wwsw7"]
+[ext_resource type="PackedScene" uid="uid://d28asotdcyory" path="res://asteroid_spawner2 (1).tscn" id="5_nt4xt"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w37f1"]
 panorama = ExtResource("2_58roa")
@@ -27,3 +28,10 @@ environment = SubResource("Environment_5g3jv")
 transform = Transform3D(-8.742278e-07, 0, 20, 0, 20, 0, -20, 0, -8.742278e-07, 7.6995645, 0, 0)
 visible = false
 texture = ExtResource("4_wwsw7")
+
+[node name="AsteroidSpawner2" parent="." unique_id=1112013839 node_paths=PackedStringArray("asteroid_container", "player_ship") instance=ExtResource("5_nt4xt")]
+despawn_x = -5.0
+asteroid_container = NodePath("../AsteroidContainer")
+player_ship = NodePath("../PlayerShip")
+
+[node name="AsteroidContainer" type="Node3D" parent="." unique_id=526383648]

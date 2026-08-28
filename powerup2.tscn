@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b1rmi2n7tf5gv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4qw0"]
+transparency = 1
+albedo_color = Color(1, 0.011764706, 0, 0.4)
+
+[sub_resource type="SphereMesh" id="SphereMesh_26sad"]
+material = SubResource("StandardMaterial3D_q4qw0")
+
+[node name="Powerup" type="RigidBody3D" unique_id=622051209]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1206743454]
+mesh = SubResource("SphereMesh_26sad")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D" unique_id=311396989]
+text = "+1 Heart"

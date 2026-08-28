@@ -69,8 +69,6 @@ func _process(delta: float) -> void:
 	# Make sure both controllers have been assigned.
 	if controller_r == null or controller_l == null:
 		return
-
-	print("checking grip_clicks")
 	# ========================================================
 	# FIND A CONTROLLER TRYING TO GRAB
 	# ========================================================
@@ -82,8 +80,6 @@ func _process(delta: float) -> void:
 
 		var left_grabbing := \
 			controller_l.is_button_pressed("grip_click")
-		print(left_grabbing)
-		print(right_grabbing)
 
 		# Right controller gets priority if both are pressed
 		# on exactly the same frame.

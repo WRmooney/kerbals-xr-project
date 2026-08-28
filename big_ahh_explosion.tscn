@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b0n5wo3cuf0a7"]
+
+[ext_resource type="Texture2D" uid="uid://blcpm0y6roxuv" path="res://panorama_image (1).png" id="1_n55to"]
+
+[sub_resource type="Curve" id="Curve_sqko4"]
+_limits = [-1.0, 1024.0, 0.0, 1.0]
+_data = [Vector2(0.02362205, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k22k7"]
+curve = SubResource("Curve_sqko4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_al5ll"]
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 2.5
+color = Color(1, 0, 0, 1)
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
+hue_variation_curve = SubResource("CurveTexture_k22k7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_heti6"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.6784314)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5g3jv"]
+material = SubResource("StandardMaterial3D_heti6")
+
+[sub_resource type="Skin" id="Skin_65226"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_8tgev"]
+panorama = ExtResource("1_n55to")
+
+[sub_resource type="Sky" id="Sky_ymh6x"]
+sky_material = SubResource("PanoramaSkyMaterial_8tgev")
+
+[sub_resource type="Environment" id="Environment_vq676"]
+background_mode = 2
+sky = SubResource("Sky_ymh6x")
+
+[node name="Big Ahh Explosion" type="GPUParticles3D" unique_id=1161900062]
+amount = 400
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_al5ll")
+draw_pass_1 = SubResource("SphereMesh_5g3jv")
+draw_skin = SubResource("Skin_65226")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=238109682]
+transform = Transform3D(0.92752856, 0, 0.3737523, 0, 1, 0, -0.3737523, 0, 0.92752856, 4.2000217, 8.025399, 13.995773)
+text = "Game Over!
+
+Score: 341
+"
+font_size = 60
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1416704513]
+environment = SubResource("Environment_vq676")
