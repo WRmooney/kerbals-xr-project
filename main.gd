@@ -4,6 +4,13 @@ var xr_interface: OpenXRInterface
 ## Preferred refresh rate. Will fallback to what the headset reports
 @export var target_refresh_rate := 72.0
 
+@onready var player_ship_joystick = $FlightMode/PlayerShip/Joystick
+@onready var right_controller = $XROrigin3D/XRControllerRight
+@onready var left_controller = $XROrigin3D/XRControllerLeft
+
+
+var connected_controller_refs = false
+
 ## _ready() is called when the node is initialize
 func _ready() -> void:
 	print(":3")
@@ -25,7 +32,16 @@ func _ready() -> void:
 	get_viewport().use_xr = true
 
 	xr_interface.session_begun.connect(_on_session_begun)
+	if right_controller and left_controller and player_ship_joystick and not connected_controller_refs:
+		player_ship_joystick.controller_r = right_controller
+		player_ship_joystick.controller_l = left_controller 
+		connected_controller_refs = true
 
+func _process(delta: float) -> void:
+	if right_controller and left_controller and player_ship_joystick and not connected_controller_refs:
+		player_ship_joystick.controller_r = right_controller
+		player_ship_joystick.controller_l = left_controller 
+		connected_controller_refs = true
 
 func _on_session_begun() -> void:
 	var rates := xr_interface.get_available_display_refresh_rates()

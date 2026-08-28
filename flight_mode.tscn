@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bgooer2ovaj0r"]
+
+[ext_resource type="Script" uid="uid://dy0b21yasqad4" path="res://flight_mode.gd" id="1_sw30a"]
+[ext_resource type="Texture2D" uid="uid://blcpm0y6roxuv" path="res://panorama_image (1).png" id="2_58roa"]
+[ext_resource type="PackedScene" uid="uid://bowu3np7y30um" path="res://player_ship.tscn" id="3_58roa"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w37f1"]
+panorama = ExtResource("2_58roa")
+
+[sub_resource type="Sky" id="Sky_ymh6x"]
+sky_material = SubResource("PanoramaSkyMaterial_w37f1")
+
+[sub_resource type="Environment" id="Environment_5g3jv"]
+background_mode = 2
+sky = SubResource("Sky_ymh6x")
+
+[node name="FlightMode" type="Node3D" unique_id=2127902471]
+script = ExtResource("1_sw30a")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1866123137]
+environment = SubResource("Environment_5g3jv")
+
+[node name="PlayerShip" parent="." unique_id=906353125 instance=ExtResource("3_58roa")]
