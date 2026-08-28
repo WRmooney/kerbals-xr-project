@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bv0w0fcso1icx"]
+
+[ext_resource type="PackedScene" uid="uid://bmajj8peuvkj" path="res://table.tscn" id="1_hsibu"]
+[ext_resource type="PackedScene" uid="uid://bw61pj7jwjs0x" path="res://Parts/Thruster.gltf" id="2_ltgig"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aihiy"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_aihiy"]
+
+[node name="build area" type="Node3D" unique_id=1268139455]
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=831529053]
+physics_material_override = SubResource("PhysicsMaterial_aihiy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=1179977932]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_aihiy")
+debug_color = Color(0.50825155, 0.54466635, 0.5454488, 0.41960785)
+
+[node name="table" parent="." unique_id=1296891049 instance=ExtResource("1_hsibu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7181377, 0.00867486, -0.4978534)
+
+[node name="Root" parent="." unique_id=488393675 instance=ExtResource("2_ltgig")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.4056668, 0.985132, -1.0586711)

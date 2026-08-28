@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b6x4mr1vog4rm"]
+
+[ext_resource type="PackedScene" uid="uid://ckdgv43myl2wx" path="res://Parts/Part Studio 1.gltf" id="1_vk2th"]
+
+[node name="tip" type="Node3D" unique_id=1328606701]
+
+[node name="Root" parent="." unique_id=633873566 instance=ExtResource("1_vk2th")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0021550655, 0, -0.013705969)
