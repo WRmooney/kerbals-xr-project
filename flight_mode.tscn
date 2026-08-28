@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dy0b21yasqad4" path="res://flight_mode.gd" id="1_sw30a"]
 [ext_resource type="Texture2D" uid="uid://blcpm0y6roxuv" path="res://panorama_image (1).png" id="2_58roa"]
 [ext_resource type="PackedScene" uid="uid://bowu3np7y30um" path="res://player_ship.tscn" id="3_58roa"]
+[ext_resource type="Texture2D" uid="uid://l0qspk6u3dum" path="res://icon.svg" id="4_wwsw7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w37f1"]
 panorama = ExtResource("2_58roa")
@@ -21,3 +22,7 @@ script = ExtResource("1_sw30a")
 environment = SubResource("Environment_5g3jv")
 
 [node name="PlayerShip" parent="." unique_id=906353125 instance=ExtResource("3_58roa")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1605130874]
+transform = Transform3D(-8.742278e-07, 0, 20, 0, 20, 0, -20, 0, -8.742278e-07, 7.6995645, 0, 0)
+texture = ExtResource("4_wwsw7")
