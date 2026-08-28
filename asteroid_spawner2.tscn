@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bxgv0n2wq4kix"]
+
+[ext_resource type="Script" uid="uid://dfakqt2pt30pg" path="res://asteroid_spawner2.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://byk2at5niu6hl" path="res://asteroid_3d.tscn" id="2"]
+
+[node name="AsteroidSpawner2" type="Node3D" unique_id=938442511]
+script = ExtResource("1")
+asteroid_scene = ExtResource("2")
+
+[node name="Timer" type="Timer" parent="." unique_id=1895283590]
+one_shot = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1770541686]
+transform = Transform3D(1, 0, 0, 0, 0.99191725, 0.12688644, 0, -0.12688644, 0.99191725, 0, 8.227096, 16.817123)
+current = true
+fov = 80.6
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=708756434]
+transform = Transform3D(0.8, -0.35, 0.48, 0, 0.8, 0.6, -0.6, -0.48, 0.64, 0, 10, 0)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="Area3D" type="Area3D" parent="." unique_id=170813576]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=1207814942]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=322759928]
