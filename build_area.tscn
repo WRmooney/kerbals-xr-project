@@ -3,9 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bmajj8peuvkj" path="res://table.tscn" id="1_hsibu"]
 [ext_resource type="PackedScene" uid="uid://bw61pj7jwjs0x" path="res://Parts/Thruster.gltf" id="2_ltgig"]
 
-[ext_resource type="PackedScene" uid="uid://lpksmtnbf8ab" path="res://table.tscn" id="1_hsibu"]
-[ext_resource type="PackedScene" uid="uid://bw61pj7jwjs0x" path="res://Parts/Thruster.gltf" id="2_ltgig"]
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aihiy"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_aihiy"]

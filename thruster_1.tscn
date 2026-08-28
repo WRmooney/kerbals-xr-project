@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cjkee07gd5ge1"]
-=======
-[gd_scene format=3 uid="uid://cjgukrislxqb4"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://bw61pj7jwjs0x" path="res://Parts/Thruster.gltf" id="1_qc3cx"]
 
