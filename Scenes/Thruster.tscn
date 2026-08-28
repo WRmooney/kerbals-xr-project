@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dsx5lgw8k5jsw"]
+
+[ext_resource type="PackedScene" uid="uid://bw61pj7jwjs0x" path="res://Parts/Thruster.gltf" id="1_i0lrr"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bgtaa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_irmjr"]
+albedo_color = Color(0.21176471, 0.27058825, 0.30980393, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mky1q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3qxc"]
+albedo_color = Color(0.21176471, 0.27058825, 0.30980393, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1705310677]
+
+[node name="Thruster" parent="." unique_id=1226316469 instance=ExtResource("1_i0lrr")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Thruster" unique_id=333994010]
+transform = Transform3D(0.039999995, 0, 0, 0, 0.029999997, 0, 0, 0, 0.039999995, 0, 0.029175952, 0)
+mesh = SubResource("CapsuleMesh_bgtaa")
+surface_material_override/0 = SubResource("StandardMaterial3D_irmjr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Thruster" unique_id=1115572132]
+transform = Transform3D(0.08, 0, 0, 0, 0.02, 0, 0, 0, 0.08, 0, 0.016200714, 0)
+mesh = SubResource("CylinderMesh_mky1q")
+surface_material_override/0 = SubResource("StandardMaterial3D_e3qxc")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bewi773v8t7o6"]
+
+[ext_resource type="PackedScene" uid="uid://beh8gtpji1m2t" path="res://Parts/LaunchPad.gltf" id="1_dn5ow"]
+
+[node name="Node3D" type="Node3D" unique_id=233466917]
+
+[node name="Root" parent="." unique_id=1436352847 instance=ExtResource("1_dn5ow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0045689344, 0, 0.033951283)
